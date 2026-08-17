@@ -12,7 +12,7 @@ The project also includes an **Admin Dashboard** for monitoring cluster health, 
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 1. Build a secure, production-quality web-based file management application.
 2. Use Hadoop HDFS as the primary storage backend instead of a local filesystem.
@@ -23,7 +23,7 @@ The project also includes an **Admin Dashboard** for monitoring cluster health, 
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 | Layer | Technology | Purpose |
 |---|---|---|
@@ -48,7 +48,7 @@ Express.js provides a lightweight REST API architecture with easier setup and de
 
 ---
 
-# 🏗️ System Architecture
+#  System Architecture
 
 CloudHive follows a layered architecture:
 
@@ -87,7 +87,7 @@ CloudHive follows a layered architecture:
 
 ---
 
-# 📦 Sequential Modules
+#  Sequential Modules
 
 The modules are ordered according to development dependency, so each module builds on the previous one.
 
@@ -356,7 +356,7 @@ A protected Admin Dashboard displaying cluster and application metrics.
 
 ---
 
-# 🔄 File Upload Data Flow
+#  File Upload Data Flow
 
 ```text
 User
@@ -400,7 +400,7 @@ File Metadata
 
 ---
 
-# 🐳 Docker-Based HDFS Cluster
+#  Docker-Based HDFS Cluster
 
 CloudHive uses Docker Compose to simulate a multi-node Hadoop environment on a single development machine.
 
@@ -418,7 +418,7 @@ This allows the project to demonstrate distributed storage and replication witho
 
 ---
 
-# 🗓️ Development Timeline
+#  Development Timeline
 
 | Phase | Modules | Estimated Time |
 |---|---|---|
@@ -432,7 +432,7 @@ This allows the project to demonstrate distributed storage and replication witho
 
 ---
 
-# 🚀 Future Enhancements
+#  Future Enhancements
 
 | Enhancement | Priority |
 |---|---|
@@ -450,7 +450,7 @@ This allows the project to demonstrate distributed storage and replication witho
 
 ---
 
-# ⭐ Why CloudHive?
+#  Why CloudHive?
 
 CloudHive combines **full-stack web development** with **distributed systems engineering**.
 
@@ -468,9 +468,9 @@ The project demonstrates how a modern file-management application can be built o
 
 ---
 
-# 📌 Project Status
+#  Project Status
 
-> 🚧 **Under Development**
+>  **Under Development**
 
 CloudHive is being developed incrementally, following the module sequence described above.
 
@@ -478,7 +478,7 @@ The initial focus is on establishing the Docker-based Hadoop cluster, connecting
 
 ---
 
-# 📁 Planned High-Level Structure
+#  Planned High-Level Structure
 
 ```text
 CloudHive/
@@ -504,7 +504,7 @@ CloudHive/
 
 ---
 
-# 📚 Core Concepts Demonstrated
+#  Core Concepts Demonstrated
 
 - Distributed file systems
 - Hadoop HDFS
