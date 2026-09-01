@@ -1,0 +1,79 @@
+# CloudHive infrastructure: PostgreSQL metadata DB + HDFS cluster (1 NameNode, 3 DataNodes)
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: cloudhive-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-cloudhive}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-cloudhive}
+      POSTGRES_DB: ${POSTGRES_DB:-cloudhive}
+    ports:
+      - "${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-cloudhive}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    container_name: cloudhive-namenode
+    restart: unless-stopped
+    ports:
+      - "${NAMENODE_PORT:-9870}:9870"       # Web UI + WebHDFS (Hadoop 3.x)
+    environment:
+      - CLUSTER_NAME=cloudhive
+    env_file:
+      - ./hadoop.env
+    volumes:
+      - namenode_data:/hadoop/dfs/name
+
+  datanode1:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: cloudhive-datanode1
+    restart: unless-stopped
+    depends_on:
+      - namenode
+    environment:
+      SERVICE_PRECONDITION: "namenode:9870"
+    env_file:
+      - ./hadoop.env
+    volumes:
+      - datanode1_data:/hadoop/dfs/data
+
+  datanode2:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: cloudhive-datanode2
+    restart: unless-stopped
+    depends_on:
+      - namenode
+    environment:
+      SERVICE_PRECONDITION: "namenode:9870"
+    env_file:
+      - ./hadoop.env
+    volumes:
+      - datanode2_data:/hadoop/dfs/data
+
+  datanode3:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: cloudhive-datanode3
+    restart: unless-stopped
+    depends_on:
+      - namenode
+    environment:
+      SERVICE_PRECONDITION: "namenode:9870"
+    env_file:
+      - ./hadoop.env
+    volumes:
+      - datanode3_data:/hadoop/dfs/data
+
+volumes:
+  postgres_data:
+  namenode_data:
+  datanode1_data:
+  datanode2_data:
+  datanode3_data:
