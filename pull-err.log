@@ -1,0 +1,50 @@
+ Image bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8 Pulling 
+ Image postgres:16-alpine Pulling 
+ Image bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8 Pulling 
+ Image bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8 Pulling 
+ Image bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8 Pulling 
+ 73b8c0ccb707 Pulling fs layer 0B
+ a65640a64a76 Pulling fs layer 0B
+ 8b1800105b98 Pulling fs layer 0B
+ c3a84a3e49c8 Pulling fs layer 0B
+ facffb3a6de3 Pulling fs layer 0B
+ c71a6df73788 Pulling fs layer 0B
+ 13c9c87a46cb Pulling fs layer 0B
+ 8b1800105b98 Pulling fs layer 0B
+ c3a84a3e49c8 Pulling fs layer 0B
+ a65640a64a76 Pulling fs layer 0B
+ 3ca2ec07878c Pulling fs layer 0B
+ 26c2dd45430e Pulling fs layer 0B
+ 13c9c87a46cb Pulling fs layer 0B
+ 8b1800105b98 Pulling fs layer 0B
+ c3a84a3e49c8 Pulling fs layer 0B
+ a65640a64a76 Pulling fs layer 0B
+ 3ca2ec07878c Pulling fs layer 0B
+ 26c2dd45430e Pulling fs layer 0B
+ 13c9c87a46cb Pulling fs layer 0B
+ 8b1800105b98 Pulling fs layer 0B
+ c3a84a3e49c8 Pulling fs layer 0B
+ a65640a64a76 Pulling fs layer 0B
+ 3ca2ec07878c Pulling fs layer 0B
+ 26c2dd45430e Pulling fs layer 0B
+ Image bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8 Pulled 
+ Image bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8 Pulled 
+ Image bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8 Pulled 
+ Image bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8 Pulled 
+ Image postgres:16-alpine Pulled 
+ Container cloudhive-datanode3 Creating 
+ Container cloudhive-datanode1 Creating 
+ Container cloudhive-datanode2 Creating 
+ Container cloudhive-datanode2 Created 
+ Container cloudhive-datanode3 Created 
+ Container cloudhive-datanode1 Created 
+ Container cloudhive-namenode Starting 
+ Container cloudhive-postgres Starting 
+ Container cloudhive-namenode Started 
+ Container cloudhive-datanode3 Starting 
+ Container cloudhive-datanode1 Starting 
+ Container cloudhive-datanode2 Starting 
+ Container cloudhive-datanode3 Started 
+ Container cloudhive-datanode2 Started 
+ Container cloudhive-datanode1 Started 
+Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint cloudhive-postgres (c01749c40c0d8ba3bb6a354fdea718a4705b1ee5717333f4220d82cc0ab70bc2): Bind for 0.0.0.0:5432 failed: port is already allocated
